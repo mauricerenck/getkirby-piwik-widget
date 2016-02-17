@@ -6,7 +6,7 @@ I will add more functionality and a more beautiful look step by step.
 ## Installation
 1. Go to the plugin-folder `/site/widgets` (if the folder doesn't exist, create it)
 2. get the plugin using 
-    - Git: `git submodule add https://github.com/mauricerenck/getkirby-piwik-dashboard.git piwik-widget`
+    - Git: `git submodule add https://github.com/mauricerenck/getkirby-piwik-widget.git piwik-widget`
     - Download: Download it from GitHub, unzip to plugin-folder, make sure to name the directory `piwik-widget`
 
 ## Configuration
