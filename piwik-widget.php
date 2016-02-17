@@ -4,8 +4,9 @@ return array(
 	'html'  => function() {
 
 		$data = array(
-			'keywords'	=> array(),
-			'visitors'	=> array()
+			'keywords' => array(),
+			'visitors' => array(),
+			'goals'    => array()
 		);
 
 		$token_auth = c::get('piwik_token');
@@ -47,7 +48,33 @@ return array(
 		$fetched = file_get_contents($url);
 		$content = unserialize($fetched);
 
-		$data['visitors']= $content[0];
+		$data['visitors'] = $content[0];
+
+
+		// GET GOALS
+		$url = $baseUrl.'&method=Goals.getGoals';
+		$goals = array();
+
+		$fetched = file_get_contents($url);
+		$allGoals = unserialize($fetched);
+
+		foreach ($allGoals as $goal) {
+			$currentGoal = array(
+				'id'	=> $goal['idgoal'],
+				'name'	=> $goal['name']
+			);
+
+			$url = $baseUrl.'&method=Goals.get&idGoal='.$currentGoal['id'].'&period=day&date=today';
+
+			$fetched = file_get_contents($url);
+			$singleGoal = unserialize($fetched);
+
+			$currentGoal['conversions'] = $singleGoal['nb_conversions'];
+			$data['goals'][] = $currentGoal;
+		}
+
+		// image graph
+		$data['graph'] = $baseUrl.'&method=ImageGraph.get&period=&period=day&date=previous7&apiModule=VisitsSummary&apiAction=get&graphType=evolution&width=600&height=150';
 
 		return tpl::load(__DIR__ . DS . 'template.php', $data);
 	}
