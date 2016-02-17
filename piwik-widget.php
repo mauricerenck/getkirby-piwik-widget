@@ -12,7 +12,7 @@ return array(
 		$baseUrl = c::get('piwik_baseUrl');
 		$siteId = c::get('piwik_siteId');
 
-		if($token_auth === null || $baseUrl === null || $piwik_siteId === null) {
+		if($token_auth === null || $baseUrl === null || $siteId === null) {
 			echo '<h2>ERROR</h2>';
 			echo '<p>Please provide your Piwik Auth Token and a base url in your config.php - ';
 			echo 'You can find more information in the README.md of this widget</p>';
