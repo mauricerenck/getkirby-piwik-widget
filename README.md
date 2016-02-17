@@ -13,7 +13,9 @@ I will add more functionality and a more beautiful look step by step.
 You have to set three values in your config.php
 
 `c::set('piwik_token', 'xxxxxxxxxxxxxxx');`
+
 `c::set('piwik_baseUrl', 'http://your.piwik-url.tld/');`
+
 `c::set('piwik_siteId', '1');`
 
 To find your Piwik-Token, login to Piwik, click on your personal-settings (user-icon top-right), then click on "API", copy your token (without &token_auth=).
