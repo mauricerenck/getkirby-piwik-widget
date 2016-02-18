@@ -3,7 +3,7 @@
 This is a (currently) very rudimentary widget for your Kirby-Panel. It shows you current Piwik-Stats of your site.
 I will add more functionality and a more beautiful look step by step.
 
-![sample](getkirby-piwik-widget/piwik-dash-sample.png)
+![sample](https://github.com/mauricerenck/getkirby-piwik-widget/piwik-dash-sample.png)
 
 ## Installation
 1. Go to the plugin-folder `/site/widgets` (if the folder doesn't exist, create it)
