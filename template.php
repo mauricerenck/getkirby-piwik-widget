@@ -1,3 +1,7 @@
+<?php
+	$baseUrl = c::get('piwik_baseUrl');
+	$siteId = c::get('piwik_siteId');
+?>
 <div id="piwik">
 	<div class="block">
 		<img src="<?php echo $graph; ?>" alt="graph" />
@@ -41,6 +45,9 @@
 		<?php endforeach; ?>
 		</ul>
 	</div>
+	<div class="block piwiklink">
+		<a href="<?php echo $baseUrl; ?>/index.php?module=CoreHome&action=index&date=today&period=day&idSite=<?php echo $siteId; ?>" target="_blank">Go to Piwik <i class="fa fa-angle-right"></i></a>
+	</div>
 </div>
 
 <style media="screen">
@@ -76,5 +83,13 @@
 		width: 20%;
 		text-align: right;
 		float: right;
+	}
+
+	#piwik .piwiklink {
+		text-align: right;
+	}
+
+	#piwik .piwiklink a:hover {
+		text-decoration: underline;
 	}
 </style>
