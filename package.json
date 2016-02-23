@@ -1,0 +1,8 @@
+{
+  "name":     "Piwik Panal Widget",
+  "author":   "Maurice Renck",
+  "version":  "0.1.1",
+  "repository": {
+    "url": "https://github.com/mauricerenck/getkirby-piwik-widget"
+  }
+}
