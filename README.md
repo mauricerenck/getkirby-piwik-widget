@@ -24,5 +24,5 @@ To find your Piwik-Token, login to Piwik, click on your personal-settings (user-
 Set the base-url to the URL piwik is available via web
 Set the site id to the site you want to see reportings of.
 
-That's it for now.
+That is it for now.
 More options and possibilities will follow.
