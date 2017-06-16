@@ -26,4 +26,3 @@ Set the site id to the site you want to see reportings of.
 
 That is it for now.
 More options and possibilities will follow.
-Update is following.
